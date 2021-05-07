@@ -11,3 +11,9 @@
 * Power saving mode is on by default but it can also be turned off
 * You can reset the temperature to 20 with a reset function
 * You can ask about the thermostat's current energy usage: < 18 is low-usage, <= 25 is medium-usage, anything else is high-usage.
+
+## To access Thermostat
+Copy and paste the index.html path into your web-browser
+
+## To run tests
+Copy and paste the SpecRunner.html path into your web-browser
