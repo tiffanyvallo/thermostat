@@ -28,5 +28,11 @@ describe ('Thermostat', function() {
     })
   })
 
+  describe('Power save mode', function() {
+    it('can raise error if temperature goes above 25 degrees in power save mode', function() {
+      thermostat.powersave = true
+      expect(function() { thermostat.up(7) } ).toThrowError(Error, 'Powersave Mode on: Max temp is 25 degrees!')
+    })
+  })
   
 });
