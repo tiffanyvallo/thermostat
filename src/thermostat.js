@@ -21,4 +21,8 @@ class Thermostat{
     this.temperature -= amount
   }
 
+  reset() {
+    this.temperature = 20
+  }
+
 }

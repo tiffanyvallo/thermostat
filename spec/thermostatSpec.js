@@ -42,4 +42,12 @@ describe ('Thermostat', function() {
     })
   })
   
+
+  describe('reset', function(){
+    it('can reset the temp to 20 when called', function() {
+      thermostat.up(5)
+      thermostat.reset()
+      expect(thermostat.temperature).toEqual(20)
+    })
+  })
 });
