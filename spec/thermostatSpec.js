@@ -50,4 +50,19 @@ describe ('Thermostat', function() {
       expect(thermostat.temperature).toEqual(20)
     })
   })
+
+  describe('energy usage', function(){
+    it('can show low usage', function(){
+      thermostat.down(3)
+      expect(thermostat.energyUsage()).toEqual('low-usage')
+    })
+    it('can show medium usage', function(){
+      expect(thermostat.energyUsage()).toEqual('medium-usage')
+    })
+    it('can show high usage', function(){
+      thermostat.powersave = false
+      thermostat.up(10)
+      expect(thermostat.energyUsage()).toEqual('high-usage')
+    })
+  })
 });
