@@ -15,6 +15,10 @@ describe ('Thermostat', function() {
       thermostat.up(5)
       expect(thermostat.temperature).toEqual(25)
     })
+
+    it('can raise error if temperature goes above 35 degrees', function() {
+      expect(function() { thermostat.up(17) } ).toThrowError(Error, 'Powersave Mode off: Max temp is 35 degrees!')
+    })
   })
 
   describe('down', function() {

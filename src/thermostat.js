@@ -6,8 +6,10 @@ class Thermostat{
   }
 
   up(amount) {
-    if(this.powersave) {
+    if(this.powersave && (this.temperature + amount) > 25) {
       throw new Error('Powersave Mode on: Max temp is 25 degrees!')
+    } else if (this.powersave === false && (this.temperature + amount) > 35) {
+      throw new Error('Powersave Mode off: Max temp is 35 degrees!')
     }
     this.temperature += amount
   }
