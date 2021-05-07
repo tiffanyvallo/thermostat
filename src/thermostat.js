@@ -1,5 +1,5 @@
 class Thermostat{
-  constructor(temperature = 20, powersave = false) {
+  constructor(temperature = 20, powersave = true) {
     this.temperature = temperature
     this.minimumTemperature = 10
     this.powersave = powersave
